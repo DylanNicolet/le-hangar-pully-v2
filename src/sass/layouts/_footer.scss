@@ -1,0 +1,20 @@
+@use "../utils";
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: utils.$bkg-secondary;
+    padding: 10px;
+
+    @include utils.desktop-only {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+}
+
+footer p {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    margin-top: 0;
+}

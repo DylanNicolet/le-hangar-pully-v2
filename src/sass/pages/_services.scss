@@ -1,0 +1,54 @@
+@use "../utils";
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include utils.desktop-only {
+        justify-content: space-around;
+    }
+}
+
+.services__title {
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    @include utils.desktop-only {
+        margin-bottom: 70px;
+        font-size: 1.9rem;
+    }
+}
+
+.services__container {
+    border: 2px solid utils.$color-primary;
+    width: 85%;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+
+    @include utils.desktop-only {
+        width: 35vw;
+        padding-left: 30px;
+        padding-right: 25px;padding-bottom: 50px;
+        padding-top: 30px;
+    }
+
+    h3 {
+        text-align: center;
+        text-decoration: underline;
+
+        @include utils.desktop-only {
+            font-size: 1.4rem;
+            margin-bottom: 50px;
+        }
+    }
+    
+    li {
+        @include utils.desktop-only {
+            font-size: 1.2rem;
+        }
+    }
+}

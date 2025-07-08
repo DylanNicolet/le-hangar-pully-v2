@@ -1,0 +1,33 @@
+@use "../utils";
+
+.info-soin {
+    background-color: utils.$bkg-secondary;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+
+    @include utils.desktop-only {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+.info-soin h2 {
+    margin: 0px auto 20px auto;
+
+    @include utils.desktop-only {
+        margin: 0px auto 50px auto;
+        font-size: 1.9rem;
+    }
+}
+
+.card-container {
+    @include utils.desktop-only {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 85%;
+        justify-content: center;
+    }
+}
