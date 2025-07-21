@@ -1,4 +1,4 @@
-import keuneLogo from "../images/logo_keune.png"
+import keuneLogo from "../assets/images/logo_keune.png"
 
 export default function Keune() {
     return (

@@ -1,42 +1,29 @@
-import { useDispatch } from "react-redux";
-import { updateModalSoins } from "../redux/webConfigSlice";
-import database from "../Text for soins spéciaux/soinSpeciauxText";
-import { useSelector } from "react-redux";
-
-export default function ModalSoins() {
-    const key = useSelector((state) => state.webConfig.modalSoins.key)
-    let soinSpeciauxText = database.soinSpeciauxText.filter((a) => {if(a.key===key){return a}})[0]
-    const dispatch = useDispatch()
-
-    function handleClick() {
-        dispatch(updateModalSoins({status: false, key: ""}))
-    }
-
+export default function ModalSoins({ data, onClose }) {
     return (
         <section className="modal-soins">
-            <h3>{key}</h3>
+            <h3>{data.key}</h3>
             
-            <h4>{soinSpeciauxText.title1}</h4>
-            <p>{soinSpeciauxText.text1}</p>
-            {soinSpeciauxText.listTitleKeratine && <p>{soinSpeciauxText.listTitleKeratine}</p>}
-            {soinSpeciauxText.listPointsKeratine && 
+            <h4>{data.title1}</h4>
+            <p>{data.text1}</p>
+            {data.listTitleKeratine && <p>{data.listTitleKeratine}</p>}
+            {data.listPointsKeratine && 
                 <ul>
-                    {soinSpeciauxText.listPointsKeratine.map((listItem, index) => {return <li key={index}>{listItem}</li>})}
+                    {data.listPointsKeratine.map((listItem, index) => {return <li key={index}>{listItem}</li>})}
                 </ul>
             }
 
-            <h4>{soinSpeciauxText.title2}</h4>
-            <p>{soinSpeciauxText.text2}</p>
+            <h4>{data.title2}</h4>
+            <p>{data.text2}</p>
 
-            <h4>{soinSpeciauxText.title3}</h4>
-            <p>{soinSpeciauxText.text3}</p>
-            {soinSpeciauxText.listPointsTanin && 
+            <h4>{data.title3}</h4>
+            <p>{data.text3}</p>
+            {data.listPointsTanin && 
                 <ul>
-                    {soinSpeciauxText.listPointsTanin.map((listItem, index) => {return <li key={index}>{listItem}</li>})}
+                    {data.listPointsTanin.map((listItem, index) => {return <li key={index}>{listItem}</li>})}
                 </ul>
             }
 
-            <button onClick={handleClick} className="close-button">X</button>
+            <button onClick={onClose} className="close-button">X</button>
         </section>
     )
 }

@@ -1,5 +1,5 @@
-import image1 from "../images/img-salon1.webp"
-import image2 from "../images/img-salon2.webp"
+import image1 from "../assets/images/img-salon1.webp"
+import image2 from "../assets/images/img-salon2.webp"
 
 export default function LeSalon() {
     return (
