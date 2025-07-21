@@ -1,12 +1,16 @@
-# React + Vite
+# Le Hangar Pully - A real Hair salon's website 
+![Screenshot from Le Hangar Pully](src/assets/images/ReadMe-screenshot.webp)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is version 2 of the repository for an actual website made for a friend who owns a hair salon: [https://www.lehangarpully.ch/](https://www.lehangarpully.ch/)
 
-Currently, two official plugins are available:
+The website had to be dark and industrial, responsive, and simple.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It contains links for booking and everything one would need to access the salon easily.
 
-## Expanding the ESLint configuration
+GitHub Link to Version 1 (Discontinued): [https://github.com/DylanNicolet/le-hangar-pully](https://github.com/DylanNicolet/le-hangar-pully)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Used
+
+- **Framework**: [React](https://reactjs.org/) with Vite  
+- **Styling**: SCSS  
+- **Deployment**: Netlify
